@@ -10,10 +10,10 @@ export async function middleware(request: NextRequest) {
 
     if (token && 
         (
-            url.pathname.startswith('/sign-in') ||
-            url.pathname.startswith('/sign-up') ||
-            url.pathname.startswith('/verify') ||
-            url.pathname.startswith('/')
+            url.pathname.startsWith('/sign-in') ||
+            url.pathname.startsWith('/sign-up') ||
+            url.pathname.startsWith('/verify') ||
+            url.pathname.startsWith('/')
         )
     ){
         return NextResponse.redirect(new URL('/dashboard', request.url))
